@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * INSTRUCTIONS.
  * 
@@ -25,9 +27,18 @@ public class ProblemSet3 {
 	 * Make sure you're testing your code by calling your methods
 	 * from the main method!
 	 */
-	
 	public static void main(String[] args) {
-			
+		ProblemSet3 ps3 = new ProblemSet3();
+		ps3.dateFashion(5, 10);
+		ps3.dateFashion(5, 2);
+		ps3.dateFashion(5, 5);
+		ps3.fizzString("fig");
+		ps3.fizzString("dib");
+		ps3.fizzString("fib");
+		ps3.squirrelPlay(70, false);
+		ps3.squirrelPlay(95, false);
+		ps3.squirrelPlay(95, true);
+		ps3.fizzStringAgain(15);
 	}
 	
 	/*
@@ -47,6 +58,13 @@ public class ProblemSet3 {
 	 */
 	
 	public void dateFashion(int you, int date) {
+		if(you <= 2 || date <= 2) {
+			System.out.println("NO");
+		} else if(you >= 8 || date >= 8) {
+			System.out.println("YES");
+		} else {
+			System.out.println("MAYBE");
+		}
 		
 	}
 	
@@ -62,7 +80,13 @@ public class ProblemSet3 {
 	 */
 	
 	public void fizzString(String str) {
-		
+		if (str.contains("f") && !str.contains("b")) {
+			System.out.println("FIZZ");
+		} else if(str.contains("b") && !str.contains("f")) {
+			System.out.println("BUZZ");
+		} else if(str.contains("f") && str.contains("b")) {
+			System.out.println("FIZZBUZZ");
+		}
 	}
 	
 	/*
@@ -78,7 +102,19 @@ public class ProblemSet3 {
 	 */
 	
 	public void squirrelPlay(int temp, boolean isSummer) {
-		
+		if (isSummer == true) {
+			if (temp >= 60 && temp <= 100 ) {
+				System.out.println("YES");
+			} else {
+				System.out.println("NO");
+			}
+		} else {
+			if (temp >= 60 && temp <= 90) {
+				System.out.println("YES");
+			} else {
+				System.out.println("NO");
+			}
+		}
 	}
 	
 	/*
@@ -93,9 +129,16 @@ public class ProblemSet3 {
 	 */
 	
 	public void fizzStringAgain(int n) {
-		
+		if(n%3 == 0 && n%5 == 0 ) {
+			System.out.println("FIZZBUZZ" + "!");
+		} else if(n%3 == 0) {
+			System.out.println("FIZZ!");
+		} else if(n%5 == 0) {
+			System.out.println("BUZZ!");
+		} else {
+			System.out.println(n + "!");
+		}
 	}
-	
 	/*
 	 * We want to make a row of bricks that is goal inches long. We have a number of small
 	 * bricks (1 inch each) and big bricks (5 inches each). Print YES if it is possible

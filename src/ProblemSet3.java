@@ -29,7 +29,27 @@ public class ProblemSet3 {
 	 */
 	public static void main(String[] args) {
 		ProblemSet3 ps3 = new ProblemSet3();
+		ps3.dateFashion(5, 10);
+		ps3.dateFashion(5, 2);
+		ps3.dateFashion(5, 5);
+		ps3.isPrime(112);
+		ps3.fizzString("fig");
+		ps3.fizzString("dib");
+		ps3.fizzString("fib");
+		ps3.squirrelPlay(70, false);
+		ps3.squirrelPlay(95, false);
+		ps3.squirrelPlay(95, true);
+		ps3.fizzStringAgain(1);
+		ps3.fizzStringAgain(2);
+		ps3.fizzStringAgain(3);
+		ps3.makeBricks(3, 1, 8);
+		ps3.makeBricks(3, 1, 9);
+		ps3.makeBricks(3, 2, 10);
+		ps3.loneSum(1, 2, 3);
+		ps3.loneSum(3, 2, 3);
+		ps3.loneSum(3, 3, 3);
 		ps3.luckySum(1, 2, 3);
+		
 	}
 	/*
 	 * You and your date are trying to get a table at a restaurant. The
@@ -227,7 +247,12 @@ public class ProblemSet3 {
 	 */
 	
 	public void factorialWhile(int n) {
-		
+		int i = 1;
+		while(i<=n) {
+			i++;
+			i=i*i;
+		}
+		System.out.println(n + "! = " + i);
 	}
 	
 	/*
@@ -240,6 +265,17 @@ public class ProblemSet3 {
 	 */
 	
 	public void isPrime(int n) {
+		boolean check = false;
 		
+		for (int i = 2; i <= n/2; i++) { 
+			if (n % i == 0) { 
+				check = true;
+			}
+		}
+		if(!check) {
+			System.out.println("PRIME");
+		} else {
+			System.out.println("NOT PRIME");
+		}
 	}
 }

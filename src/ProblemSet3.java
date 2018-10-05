@@ -49,7 +49,17 @@ public class ProblemSet3 {
 		ps3.loneSum(3, 2, 3);
 		ps3.loneSum(3, 3, 3);
 		ps3.luckySum(1, 2, 3);
-		
+		ps3.luckySum(1, 2, 13);
+		ps3.luckySum(1, 13, 3);
+		ps3.factorialFor(3);
+		ps3.factorialFor(4);
+		ps3.factorialFor(5);
+		ps3.factorialWhile(3);
+		ps3.factorialWhile(4);
+		ps3.factorialWhile(5);
+		ps3.isPrime(11);
+		ps3.isPrime(17);
+		ps3.isPrime(112);
 	}
 	/*
 	 * You and your date are trying to get a table at a restaurant. The

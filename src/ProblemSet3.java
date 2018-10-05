@@ -3581,11 +3581,18 @@ public class ProblemSet3 {
 	 */
 	
 	public void makeBricks(int small, int big, int goal) {
-		if(small + big*5 >= goal) {
-			System.out.println("YES");
-		} else {
-			System.out.println("NO");
-		}
+		if (big >= goal / 5) {
+            big -= goal / 5;
+            goal %= 5;
+        }
+        else {
+            goal -= big * 5;
+        }
+        if (small >= goal) {
+            System.out.println("YES.");
+        }
+        else {
+            System.out.println("NO.");
 	}
 	
 	/*
